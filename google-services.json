@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "636697627346",
+    "firebase_url": "https://fire-cac50.firebaseio.com",
+    "project_id": "fire-cac50",
+    "storage_bucket": "fire-cac50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636697627346:android:4a4a29d590e3b67c",
+        "android_client_info": {
+          "package_name": "com.example.priyamkumar.fireapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636697627346-9aa9f4a2q4i71rkv127ehehd3f5as40g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHblI8u-JycGSGO4SSeKQWlUwcIjRi9a0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636697627346-9aa9f4a2q4i71rkv127ehehd3f5as40g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
