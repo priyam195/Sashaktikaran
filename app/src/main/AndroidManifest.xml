@@ -3,6 +3,8 @@
     package="com.example.priyamkumar.fireapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +22,11 @@
         <activity
             android:name=".Suggestion"
             android:label="@string/title_activity_suggestion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Call" />
+        <activity
+            android:name=".Adhikaar"
+            android:label="@string/title_activity_adhikaar"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -74,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
                     gift.get(arg2).checked=false;
                     startActivity(new Intent(MainActivity.this,Suggestion.class));
                 }
-
+                if(gift.get(6).checked==true){
+                    gift.get(arg2).checked=false;
+                    startActivity(new Intent(MainActivity.this,Call.class));
+                }
             }
 
         });
