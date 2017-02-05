@@ -43,10 +43,11 @@ public class MainActivity extends AppCompatActivity {
         gift.add(new Grid(R.drawable.policy, "योजनाएं", false,"#C7D0D6"));
         gift.add(new Grid(R.drawable.farm, "खेती", false,"#C7D0D6"));
         gift.add(new Grid(R.drawable.health, "स्वास्थ्य/शिक्षा", false,"#C7D0D6"));
-        gift.add(new Grid(R.drawable.pottery4, "व्यापार", false,"#C7D0D6"));
-        gift.add(new Grid(R.drawable.women, "महिलाएं", false,"#C7D0D6"));
-        gift.add(new Grid(R.drawable.job, "नौकरियां", false,"#C7D0D6"));
         gift.add(new Grid(R.drawable.idea, "सुझाव", false,"#C7D0D6"));
+       // gift.add(new Grid(R.drawable.pottery4, "व्यापार", false,"#C7D0D6"));
+        gift.add(new Grid(R.drawable.women, "महिलाएं", false,"#C7D0D6"));
+      //  gift.add(new Grid(R.drawable.job, "नौकरियां", false,"#C7D0D6"));
+
 
 
         GridAdapter ia=new GridAdapter(MainActivity.this, gift);
@@ -70,13 +71,47 @@ public class MainActivity extends AppCompatActivity {
                    // all.setBackgroundColor(Color.parseColor("#ffffff"));
                 }
 
-                if(gift.get(7).checked==true){
+
+                if(gift.get(4).checked==true){
                     gift.get(arg2).checked=false;
                     startActivity(new Intent(MainActivity.this,Suggestion.class));
                 }
-                if(gift.get(6).checked==true){
+                if(gift.get(0).checked==true){
                     gift.get(arg2).checked=false;
-                    startActivity(new Intent(MainActivity.this,Call.class));
+                    Intent ij = new Intent(MainActivity.this, rig.class);
+                    ij.putExtra("url","http://rasiya.esy.es/codeutsav/rights.php") ;
+                    ij.putExtra("key1","heading") ;
+                    ij.putExtra("key2","right") ;
+                    startActivity(ij);
+                    startActivity(new Intent(MainActivity.this,rig.class));
+                }
+                if(gift.get(1).checked==true){
+                    gift.get(arg2).checked=false;
+                    Intent ij = new Intent(MainActivity.this, rig.class);
+                    ij.putExtra("url","http://rasiya.esy.es/codeutsav/schemes.php") ;
+                    ij.putExtra("key1","heading") ;
+                    ij.putExtra("key2","scheme") ;
+                    startActivity(ij);
+                    startActivity(new Intent(MainActivity.this,rig.class));
+                }
+
+                if(gift.get(3).checked==true){
+                    gift.get(arg2).checked=false;
+                    Intent ij = new Intent(MainActivity.this, rig.class);
+                    ij.putExtra("url","http://rasiya.esy.es/codeutsav/scholarship.php") ;
+                    ij.putExtra("key1","no") ;
+                    ij.putExtra("key2","scholarship") ;
+                    startActivity(ij);
+                    startActivity(new Intent(MainActivity.this,rig.class));
+                }
+                if(gift.get(5).checked==true){
+                    gift.get(arg2).checked=false;
+                    Intent ij = new Intent(MainActivity.this, rig.class);
+                    ij.putExtra("url","http://rasiya.esy.es/codeutsav/womens.php") ;
+                    ij.putExtra("key1","heading") ;
+                    ij.putExtra("key2","description") ;
+                    startActivity(ij);
+                    startActivity(new Intent(MainActivity.this,rig.class));
                 }
             }
 
@@ -89,7 +124,9 @@ public class MainActivity extends AppCompatActivity {
         suny.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mcondition.setValue("sunny");
+                //mcondition.setValue("sunny");
+                startActivity(new Intent(MainActivity.this,Call.class));
+
             }
         });
         foogy.setOnClickListener(new View.OnClickListener() {
