@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         GridView gv= (GridView) findViewById(R.id.gridview);
         suny= (Button) findViewById(R.id.button2);
-        foogy= (Button) findViewById(R.id.button3);
+        //foogy= (Button) findViewById(R.id.button3);
        tv= (TextView) findViewById(R.id.tt);
 
         final ArrayList<Grid> gift=new ArrayList<Grid>();
@@ -129,14 +129,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        foogy.setOnClickListener(new View.OnClickListener() {
+        /*foogy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                // mcondition.setValue("foogy");
                 tv.setText(s);
 
             }
-        });
+        });*/
 
     }
 

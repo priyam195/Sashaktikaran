@@ -3,6 +3,7 @@ package com.example.priyamkumar.fireapp;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,10 +44,15 @@ public class rig extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rig);
+        Button PLayvideo= (Button) findViewById(R.id.playvideo);
+        Button pdf= (Button) findViewById(R.id.downloadpdf);
+
+
         Intent intent = getIntent();
         String stiurl = intent.getExtras().getString("url");
         heading=intent.getExtras().getString("key1");
          desc=intent.getExtras().getString("key2");
+
         lv1 = (ListView) findViewById(R.id.listheading);
         final ArrayList<String> mylist = new ArrayList<String>();
 
@@ -81,7 +88,7 @@ public class rig extends AppCompatActivity {
                             // TODO Auto-generated method stub
                             View v1= super.getView(position, convertView, parent);
                             TextView txt1=(TextView) v1.findViewById(android.R.id.text1);
-                            txt1.setTextColor(Color.parseColor("#145A32"));
+                            txt1.setTextColor(Color.parseColor("#ff0000"));
                             return v1;
                         }};
                     lv1.setAdapter(aa);
@@ -110,7 +117,21 @@ public class rig extends AppCompatActivity {
         });
 
 
-        Toast.makeText(this,"ued",Toast.LENGTH_SHORT);
+      PLayvideo.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              startActivity(new Intent(rig.this,PlayVideo.class));
+          }
+      });
+
+
+
+        pdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("www.education.gov.yk.ca/pdf/pdf-test.pdf")));
+            }
+        });
 
     }
 
